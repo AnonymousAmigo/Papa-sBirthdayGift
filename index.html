@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Happy Birthday, Papa</title>
+  <meta name="description" content="A simple birthday note webpage for Papa in Hinglish." />
+  <style>
+    :root{
+      --bg: #0f172a;      /* slate-900 */
+      --card: #111827;    /* gray-900 */
+      --text: #e5e7eb;    /* gray-200 */
+      --muted: #cbd5e1;   /* slate-300 */
+      --accent: #fbbf24;  /* amber-400 */
+      --ring: #22d3ee;    /* cyan-400 */
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      background: radial-gradient(1200px 800px at 15% 20%, #1e293b 0%, transparent 50%),
+                  radial-gradient(1000px 600px at 85% 80%, #0b3a42 0%, transparent 45%),
+                  var(--bg);
+      color: var(--text);
+      display:flex; align-items:center; justify-content:center; padding:24px;
+    }
+    .card{
+      width:min(720px, 92vw);
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      backdrop-filter: blur(6px);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 22px;
+      padding: 28px 28px 24px;
+      box-shadow: 0 10px 35px rgba(0,0,0,0.45);
+      position:relative;
+    }
+    .sparkle{
+      position:absolute; inset:-2px; border-radius:22px; padding:2px; pointer-events:none;
+      background: linear-gradient(135deg, transparent, rgba(251,191,36,0.25) 35%, rgba(34,211,238,0.2) 65%, transparent);
+      -webkit-mask: linear-gradient(#000, #000) content-box, linear-gradient(#000, #000);
+      -webkit-mask-composite: xor; mask-composite: exclude;
+    }
+    h1{
+      margin:0 0 12px; font-size: clamp(28px, 4vw, 40px); letter-spacing:0.3px;
+      display:flex; align-items:center; gap:12px;
+    }
+    h1 .badge{
+      font-size: 14px; background: rgba(251,191,36,0.12); color: var(--accent); border:1px solid rgba(251,191,36,0.35);
+      padding:4px 10px; border-radius:999px; font-weight:600;
+    }
+    .note{
+      font-size: clamp(16px, 2.2vw, 18px); line-height:1.7; color: var(--muted);
+      margin: 10px 0 18px;
+    }
+    .sig{
+      margin-top: 14px; font-weight:600; color: #ffffff;
+    }
+    .footer{
+      display:flex; gap:8px; flex-wrap:wrap; align-items:center; justify-content:space-between; margin-top:20px; opacity:.9;
+    }
+    .pill{
+      border:1px solid rgba(255,255,255,0.14); padding:6px 10px; border-radius:999px; font-size:13px; color: var(--muted);
+    }
+    .btn{ 
+      appearance:none; border:none; cursor:pointer; font: inherit; 
+      padding:10px 14px; border-radius:12px; color:#0b1020; background: linear-gradient(135deg, #fbbf24, #22d3ee);
+      font-weight:700; box-shadow: 0 6px 20px rgba(34,211,238,0.28);
+    }
+    .btn:active{ transform: translateY(1px); }
+  </style>
+</head>
+<body>
+  <main class="card" role="main" aria-label="Birthday Note for Papa">
+    <div class="sparkle"></div>
+    <h1>
+      Happy Birthday, Papa
+      <span class="badge" aria-label="with love">With Love</span>
+    </h1>
+
+    <p class="note">
+      Aap hamesha mere liye ek guide, protector aur best friend rahe ho. Aapki wajah se main life mein itna seekh paaya hoon. Aapki smile, aapka support aur aapka pyaar mere liye bohot special hai.
+    </p>
+    <p class="note">
+      Aap hamesha healthy, happy aur mast raho — yehi meri dua hai.
+    </p>
+
+    <p class="sig">Pyaar ke saath,<br />
+      <em>Aapka Beta-Shresth</em>
+    </p>
+
+  </main>
+</body>
+</html>
